@@ -1,7 +1,5 @@
 # referme-api
-Backend Side of ReferMe
-
-ReferMe is an innovative startup dedicated to revolutionizing the affiliate marketing space. Our platform empowers affiliates to streamline their operations by offering a centralized hub to manage and monitor their referral links.
+Frontend Side of ReferMe - ReferMe is an innovative startup dedicated to revolutionizing the affiliate marketing space. Our platform empowers affiliates to streamline their operations by offering a centralized hub to manage and monitor their referral links.
 
 Core Features Effortless Link Management Affiliators can store, organize, and access their affiliate links with ease, ensuring quick and efficient usage.
 
