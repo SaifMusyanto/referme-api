@@ -1,20 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Navbar } from "./components";
-import LoginPage from "./Page/User/Auth/LoginPage";
+import LoginPage from './Page/User/Auth/LoginPage'
 import RegisterPage from "./Page/User/Auth/RegisterPage";
+import DashboardPage from './Page/User/Dashboard/DashboardPage'
+import ProfilPage from './Page/User/SplashScreen/ProfilPage'
 
-const App = () => (
-  <BrowserRouter>
-    <div>
-      <Navbar />
+function App() {
+  return (
+    <Router>
       <div>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-        </Routes>
+        {/* <Navbar /> */}
+        <div>
+          <Routes>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/dashboardUser" element={<DashboardPage />} />
+            <Route path="/profilPage" element={<ProfilPage />} />
+          </Routes>
+        </div>
       </div>
-    </div>
-  </BrowserRouter>
-);
+    </Router>
+  )
+}
 
-export default App;
+export default App

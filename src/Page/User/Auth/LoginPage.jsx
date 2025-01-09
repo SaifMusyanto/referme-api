@@ -1,19 +1,24 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { logo } from '../../../assets'
 
 export default function LoginPage() {
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate('/profilPage');
+    };
+
     return (
-        // Wrapper
-        <div className="w-full min-h-[calc(100vh-72px)] bg-white flex justify-center"> {/* Adjust min-height */}
-            {/* Container mobile  */}
-            <div className="w-[390px] min-h-[calc(100vh-72px)]"
+        <div className="w-full h-screen flex justify-center bg-white overflow-hidden">
+            <div className="w-full max-w-md h-full"
                 style={{
                     background: 'linear-gradient(180deg, #FFEEE9 33%, #FFC7AD 98%)'
                 }}>
                 {/* Content container */}
-                <div className="w-full min-h-screen flex flex-col items-center px-4 py-8 font-poppins mt-[72px]">
+                <div className="w-full h-full flex flex-col items-center justify-center px-4 font-poppins">
                     {/* Logo */}
-                    <div className="text-[#FF5C35] text-4xl font-bold mb-16">
+                    <div className="text-[#FF5C35] text-4xl font-bold mb-12">
                         <img src={logo} alt="referme" />
                     </div>
 
@@ -23,7 +28,7 @@ export default function LoginPage() {
                     </h1>
 
                     {/* Form */}
-                    <form className="w-full space-y-4">
+                    <form className="w-full space-y-4" onSubmit={handleSubmit}>
                         <input
                             type="email"
                             placeholder="Email"
